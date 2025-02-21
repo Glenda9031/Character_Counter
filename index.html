@@ -3,19 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Character counter</title>
 </head>
 <body>
+  <main class="container">
+    <header class="header">
+      <div class="logo">
+        <img src="assets/images/logo-light-theme.svg" alt="light logo" class="logo__icon">
+      </div>
+      <div class="toggle-mood">
+        <img src="assets/images/icon-moon.svg" alt="picture of the moon" class="toggle-mode__icon">
+      </div>
+    </header>
 
-  Analyze your text in real-time.
+    <h1 class="heading text-preset-1">Analyze your text in real-time.</h1>
+    <section>
+      <textarea name="textarea" id="textarea-custom" class="textarea-custom text-preset-3" placeholder="Start typing here… (or paste your text)"></textarea>
+        <p class="info text-preset-4">
+          <img src="assets/images/icon-info.svg" alt="info icon" class="icon-info">
+          Limit reached! Your text exceeds&nbsp;
+          <span class="max-characters"></span>&nbsp; characters.
+        </p>
+    </section>
 
-  Start typing here… (or paste your text)
+    <section class="options">
+      <div>
+        <label for="exclude spaces" class="option text-preset-4">
+          <input class="box" type="checkbox" name="exclude spaces" id="exclude-spaces">
+          Exclude Spaces
+        </label>
 
-  Exclude Spaces
-  Set Character Limit
+        <label for="character-limit" ss="option text-preset-4">
+          <input class="box" type="checkbox" name="character-limit">
+          Set Character Limit
+        </label>
+
+      </div>
+    </section>
+  </main>
+  
+  
 
   Approx. reading time: <!-- Insert number --> minutes
 
@@ -30,6 +59,6 @@
 
   Letter Density
   No characters found. Start typing to see letter density.
-
+  <script src="script.js"></script>
 </body>
 </html>
