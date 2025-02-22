@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --spacing-0: 0;
+    --spacing-025: 2px;
+    --spacing-050: 4px;
+    --spacing-075: 6px;
+    --spacing-100: 8px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-250: 20px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+    --spacing-1000: 80px;
+    --radius-0: 0;
+    --radius-4: 4px;
+    --radius-6: 6px;
+    --radius-8: 8px;
+    --radius-10: 10px;
+    --radius-12: 12px;
+    --radius-16: 16px;
+    --radius-20: 20px;
+    --radius-24: 24px;
+    --radius-full: 999px;
+    --container-image: "assets/images/bg-light-theme.png";
+    --container-bg: #fff;
+    --logo-bg: #f2f2f7;
+    --heading-color: #12131a;
+    --text-color: #12131a;
+    --text-area-bg: #f2f2f7;
+    --text-area-color: #2a2b37;
+    --text-area-border: #e4e4ef;
+    --bars-bg: #f2f2f7;
+    --blue-500: #c27cf8;
+    --blue-400: #d3a0fa;
+    --yellow-500: #ff9f00;
+    --orange-500: #fe8159;
+    --orange-800: #da3701;
+  }
+  
+  .dark-mode {
+    --container-bg: #12131a;
+    --logo-bg: #2a2b37;
+    --heading-color: #f2f2f7;
+    --text-color: #e4e4ef;
+    --text-area-bg: #21222c;
+    --text-area-color: #e4e4ef;
+    --text-area-border: #2a2b37;
+    --bars-bg: #21222c;
+    background-image: url("assets/images/bg-dark-theme.png");
+  }
+  
+body {
+  font-family: 'DM Sans', sans-serif;
+  overflow: hidden;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* PRESETS */
+.text-preset-1 {
+    font-size: 2.5rem;
+    line-height: 100%;
+    letter-spacing: -.0625rem;
+}
+
+.text-preset-2 {
+    font-size: 2.8125rem;
+    line-height: 130%;
+    letter-spacing: -.0625rem;
+}
+
+.text-preset-3 {
+    font-size: 1.25rem;
+    line-height: 130%;
+    letter-spacing: -.0375rem;
+}
+
+.text-preset-4 {
+    font-size: 1rem;
+    line-height: 130%;
+    letter-spacing: -.0375rem;
+}
+
+.container {
+    transition: 1s;
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing-250);
+     background-image: url('assets/images/bg-light-theme.png');
+     background-color: var(--container-bg);
+}
+
+.toggle-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--logo-bg);
+    border-radius: var(--radius-6);
+    padding: .4375rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+

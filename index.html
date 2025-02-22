@@ -35,30 +35,47 @@
           Exclude Spaces
         </label>
 
-        <label for="character-limit" ss="option text-preset-4">
+        <label for="character-limit" class="option text-preset-4">
           <input class="box" type="checkbox" name="character-limit">
           Set Character Limit
         </label>
-
+        <input class="character-limit__input" type="text">
       </div>
+
+      <div class="reading-time text-preset-4">
+        Approx. reading time:&nbsp;
+        <span class="reading-time__counter">0</span>&nbsp; minute
+      </div>
+    </section>
+
+    <section class="counter-container">
+      <div class="counter__element counter__element-purple">
+        <h2 class="counter__title counter__characters text-preset-1">00</h2>
+        <p class="counter__sub-title text-preset-3">Total Characters
+          <span class="counter__sub-title-spaces"></span>
+        </p>
+      </div>
+
+      <div class="counter__element counter__element-yellow">
+        <h2 class="counter__title counter__characters text-preset-1">00</h2>
+        <p class="counter__sub-title text-preset-3">Word Count</p>
+      </div>
+
+      <div class="counter__element counter__element-orange">
+        <h2 class="counter__title counter__characters text-preset-1">00</h2>
+        <p class="counter__sub-title text-preset-3">Sentence Count</p>
+      </div>
+    </section>
+
+    <section class="counter__letters">
+      <h2 class="letter-density__title text-preset-2">Letter Density</h2>
+      <p class="no-characters text-preset-4">No characters found. Start 
+        typing to see letter density.</p>
     </section>
   </main>
   
   
-
-  Approx. reading time: <!-- Insert number --> minutes
-
-  <!-- Insert number -->
-  Total Characters
-
-  <!-- Insert number -->
-  Word Count
-
-  <!-- Insert number -->
-  Sentence Count
-
-  Letter Density
-  No characters found. Start typing to see letter density.
+  
   <script src="script.js"></script>
 </body>
 </html>
