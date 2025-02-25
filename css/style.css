@@ -207,7 +207,119 @@ a {
     color: var(--text-color);
 }
 
+.counter__container {
+    display: flex;
+    flex-direction: column;
+}
 
+.counter__element {
+    background-repeat: no-repeat;
+    background-position: 130%;
+    width: 100%;
+    border-radius: .75rem;
+    margin-block: .625rem;
+}
+
+.counter__element-purple {
+    background-image: url('assets/images/pattern-character-count.svg');
+    background-color: var(--blue-400);
+}
+
+.counter__element-yellow {
+    background-image: url('assets/images/pattern-word-count.svg');
+    background-color: var(--yellow-500);
+}
+
+.counter__element-orange {
+    background-image: url('assets/images/pattern-sentence-count.svg');
+    background-color: var(--orange-500);
+}
+
+.counter__title {
+    margin: 1.25rem;
+}
+
+.counter__sub-title {
+    margin: 1.25rem;
+}
+
+.letter-density__title {
+    color: var(--text-color);
+    margin-block: .9375rem;
+}
+
+.character-limit__input {
+    display: none;
+    text-align: center;
+    outline: none;
+    background-color: var(--text-area-bg);
+    color: var(--text-area-color);
+    border: .0625rem solid var(--text-area-border);
+    border-radius: .375rem;
+    padding: .75rem .25rem;
+    width: 3.4375rem;
+    height: 1.5625rem;
+}
+
+.no-characters {
+    color: var(--text-color);
+}
+
+.density__container {
+    margin-block: .625rem;
+}
+
+.density__element {
+    margin-block: .625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.letter,
+.density__number,
+.density__percentage {
+    line-height: 130%;
+    letter-spacing: -.0375rem;
+    color: var(--text-color);
+    margin-right: .625rem;
+}
+
+.progress-bar {
+    appearance: none;
+    border-radius: var(--radius-full);
+    max-width: 95%;
+    height: .75rem;
+    margin-line: .625rem;
+    background-color: var(--bars-bg);
+    overflow: hidden;
+}
+
+.progress-bar::-webkit-progress-bar {
+    border-radius: var(--radius-full);
+    background-color: var(--bars-bg);
+    overflow: hidden;
+}
+
+.progress-bar::-webkit-progress-value {
+    border-radius: var(--radius-full);
+    background-color: var(--blue-500);
+}
+
+.progress-bar::-moz-progress-bar {
+    border-radius: var(--radius-full);
+    background-color: var(--bars-bg);
+}
+
+.show-more,
+.show-less {
+    margin-block: .9375rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Media Queries for Tablets */
 
 
 
