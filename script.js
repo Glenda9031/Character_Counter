@@ -33,7 +33,26 @@ for (let char of alphabet) {
   charactersList[char] = 0;
 }
 
+function displayLettersDensity(totalLetters) {
+  let entries = Object.entries(charactersList);
+  entries.sort((a, b) => b[1] - a[1]);
+}
 
+let densityHTML = '';
+let extraDensityHTML = '';
+
+entries.forEach(([key, value], index) => {
+  if (value > 0) {
+    let percentage = 
+      totalLetters > 0 ? ((value / totalLetters) * 100).toFixed(2) : 0;
+    let elementHTML = `
+      <div class="density__element">
+        <span class="letter text-preset-4">key${key.toUpperCase()}</span>
+        <progress class="progress-bar" value="${value}" max="${totalLetters}"></progress>
+        
+      </div>`  
+  }
+})
 
 
 
