@@ -49,10 +49,27 @@ entries.forEach(([key, value], index) => {
       <div class="density__element">
         <span class="letter text-preset-4">key${key.toUpperCase()}</span>
         <progress class="progress-bar" value="${value}" max="${totalLetters}"></progress>
-        
-      </div>`  
+        <span class="density__number text-preset-4">${value}</span>&nbsp;
+        <span class="density__percentage text-preset-4">${percentage}%</span>
+      </div>`;
+      
+      if (index < 5) densityHTML += elementHTML;
+      else extraDensityHTML += elementHTML;
   }
-})
+});
+
+densityContainer.innerHTML = densityHTML;
+
+if (extraDensityHTML) {
+  let seeMore = document.createElement("p");
+  seeMore.textContent = "See more v";
+  seeMore.classList.add("text-preset-3", "show-more");
+
+  let seeLess = document.createElement("p");
+  seeLess.textContent = "See less ^";
+  seeLess.classList.add("text-preset-3", "show-less");
+  seeLess.style.display = "none";  
+}
 
 
 
