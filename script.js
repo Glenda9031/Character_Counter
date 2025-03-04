@@ -68,8 +68,38 @@ if (extraDensityHTML) {
   let seeLess = document.createElement("p");
   seeLess.textContent = "See less ^";
   seeLess.classList.add("text-preset-3", "show-less");
-  seeLess.style.display = "none";  
+  seeLess.style.display = "none";
+
+  seeMore.onclick = () => {
+    densityContainer.innerHTML = densityHTML + extraDensityHTML;
+    densityContainer.appendChild(seeLess);
+    seeMore.style.display = "none";
+    seeLess.style.display = "block";
+  };
+
+  seeLess.onclick = () => {
+    densityContainer.innerHTML = densityHTML;
+    densityContainer.appendChild(seeMore);
+    seeLess.style.display = "none";
+    seeMore.style.display = "block";
+  };
+
+  densityContainer.appendChild(seeMore);
 }
+
+function countLetterDensity() {
+  let text = textarea.value.trim().toLowerCase();
+  Object.keys(charactersList).forEach((key) => (charactersList[key] = 0));
+  let totalLetters = 0;
+  for (let char of text) {
+    if (char in charactersList) {
+      charactersList[char] += 1;
+      totalLetters++;
+    }
+  }
+  displayLettersDensity(totalLetters);
+}
+
 
 
 
