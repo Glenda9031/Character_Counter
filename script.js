@@ -100,6 +100,49 @@ function countLetterDensity() {
   displayLettersDensity(totalLetters);
 }
 
+function countCharacters() {
+  let text = textArea.value.trim();
+  totalWords = text.length > 0 ? text.split(/\s+/).length : 0;
+  totalSentences = text.length > 0 ? text.split(/[.!?]+/).filter((sentence) => sentence.trim().length > 0)
+  .length : 0;
+  counterWords.textContent = totalWords || "00";
+  totalCharacters = textarea.value.replace(/\s/g, "").length;
+  includeSpacesText.textContent = "(no space)";
+} else includeSpacesText.textContent = "";
+counterCharacters.textContent = totalCharacters || "00";
+if (characterLimit.checked) {
+  characterLimitInput.style.display = "block";
+  if (totalCharacters > charactersLimit && charactersLimit !== 0) {
+    info.style.display = "flex";
+    textarea.style.outline = "2px solid #fe8159";
+    maxChars.textContent = charactersLimit;
+  } else {
+    info.style.display = "none";
+    textarea.style.outline = "none";
+  }
+} else {
+  {
+    characterLimitInput.style.display = "none";
+    info.style.display = "none";
+    textarea.style.outline = "none";
+  }
+}
+
+function calculateReadingTime() {
+  const wordsPerMinute = 200;
+  const time = Math.ceil(totalWords / wordsPerMinute);
+  if (totalWords > 0) readingTimeCounter.textContent = "<" + time;
+  else readingTimeCounter.textContent = "00";
+}
+
+characterLimitInput.addEventListener("change", () => {
+  e.target.value = e.target.value.replace(/[^0-9]/g, "");
+  if (e.target.value.length > 1 && e.target.value[0] === "0");
+    e.target.value = e.target.value.replace(/^0+/, "");
+  if (!NaN(e.target.value)) charactersLimit = parseInt(e.target.value, 10);
+    else noChars.style.display = "block";
+});
+
 
 
 
