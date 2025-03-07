@@ -1,4 +1,4 @@
-const container = document.querySelector('.container');
+vconst container = document.querySelector('.container');
 const toggleMode = document.querySelector('.toggle-mode');
 const toggleModeIcon = document.querySelector('.toggle-mode__icon');
 const logoIcon = document.querySelector('.logo__icon');
