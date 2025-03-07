@@ -143,7 +143,30 @@ characterLimitInput.addEventListener("change", () => {
     else noChars.style.display = "block";
 });
 
+textArea.addEventListener("input", () => {
+  countCharacters();
+  countLetterDensity();
+  calculateReadingTime();
+  if (totalCharacters > 0) noChars.style.display = "none";
+  else noChars.style.display = "block";
+});
 
+excludeSpaces.addEventListener("change", countCharacters);
+characterLimit.addEventListener("change", countCharacters);
+
+toggleMode.addEventListener("click", () => {
+  if (container.classList.contains("dark-mode")) {
+    container.classList.remove("dark-mode");
+    container.style.backgroundImage = 'url("./assets/images/bg-light-theme.png")';
+    toggleModeIcon.src = "./assets/images/icon-moon.svg";
+    logoIcon.src = "./assets/images/logo-light-theme.svg";
+  } else {
+    container.classList.add("dark-mode");
+    container.style.backgroundImage = 'url("./assets/images/bg-dark-theme.png")';
+    toggleModeIcon.src = "./assets/images/icon-sun.svg";
+    logoIcon.src = "./assets/images/logo-dark-theme.svg";
+  }
+});
 
 
 
